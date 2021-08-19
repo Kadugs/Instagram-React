@@ -1,0 +1,428 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    margin-top: 54px;
+    font-family: 'Roboto', sans-serif;
+}
+strong {
+    font-weight: bold;
+}
+strong:hover,
+ion-icon:hover,
+img:hover,
+.reticencias:hover,
+.botao-publica:hover {
+    cursor: pointer;
+}
+.mobile {
+    display: none;
+}
+
+/*--------------------- TOPO  -------------------------*/
+
+.topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 54px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px rgb(211, 211, 211);
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+}
+.conteudo-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 935px;
+}
+.barra-pesquisa {
+    width: 230px;
+    height: 28px;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(211, 211, 211);
+    background-color: rgb(238, 238, 238);
+    border: solid 1px rgb(211, 211, 211);
+    border-radius: 3px;
+}
+.barra-pesquisa:focus {
+    outline: none;
+    text-align: start;
+    color: #262626;
+
+}
+
+.opcoes-topo {
+    display: flex;
+}
+.opcoes-topo ion-icon {
+    font-size: 20px;
+    margin-left: 20px;
+}
+.logos {
+    display: flex;
+}
+.logo1 {
+    font-size: 24px;
+}
+.logo2 {
+    width: 100px;
+}
+
+/*--------------------- CORPO  -------------------------*/
+
+
+.conteudo {
+    margin-top: 84px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.conteudo-meio {
+    width: 614px;
+}
+.stories,
+.post {
+    background-color: white;
+    border: solid 1px rgb(211, 211, 211);
+    border-radius: 3px;
+}
+.coluna-posts {
+    margin-top: 24px;
+}
+/*--------------------- STORIES  -------------------------*/
+
+.stories {
+    display: flex;
+    align-items: center;
+    height: 118px;
+    overflow-x: auto;
+    overflow: hidden;
+    position: relative;
+}
+.stories div {
+    text-align: center;
+    margin-left: 6px;
+}
+.stories p {
+    margin-top: 5px;
+    font-size: 12px;
+}
+.moldura {
+    background: url(src/stories_background.png) no-repeat;
+    background-size: 66px;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+.moldura img {
+    margin: 6px;
+    width: 56px;
+    width: 56px;
+}
+
+     /* BOTAO TA QUEBRADO */
+
+.seta {
+    position: absolute;
+    color: white;
+    background-color: rgba(211, 211, 211, 0.287);
+    border-radius: 50%;
+    font-size: 26px;
+    right: 10px;
+}
+
+/*------------------ COLUNA DE POSTS  -----------------*/
+
+.post {
+    margin-bottom: 60px;
+    height: 890px;
+}
+.container-conteudo {
+    width: 100%;
+    height: 612px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgb(211, 211, 211);
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.infos-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 17px;
+}
+.reticencias {
+    display: flex;
+    justify-content: center;
+}
+.reticencias > ion-icon {
+    font-size: 5.5px;
+    margin-left: 1.5px;
+}
+.perfil {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 15px 17px;
+    font-size: 14px;
+    color: #262626;
+}
+.perfil p {
+    margin-left: 13px;
+}
+
+.video-post {
+    width: 100%;
+    height: auto;
+}
+
+.interacoes-principais {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+}
+.interacao-post {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.interacao-post ion-icon,
+.comentarios ion-icon {
+    font-size: 20px;
+}
+
+.curtidas {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.curtidas p {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.comentarios p {
+    margin-left: 10px; 
+    margin-top: 7px;
+    font-size: 14px;
+}
+.comentario {
+    display: flex;
+    justify-content: space-between;
+}
+.comentario ion-icon {
+    font-size: 12px;
+    margin-right: 5px;
+}
+.comentario ion-icon:hover {
+    color: red;
+}
+
+.ver-todos {
+    color: rgb(158, 158, 158);
+}
+
+.bloco-coment {
+    display: flex;
+}
+
+.adicionar-coment {
+    height: 55px;
+    margin: 10px 0;
+    width: 100%;
+    border-top: solid 1px rgb(211, 211, 211);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.adicionar-coment div {
+    display: flex;
+    margin: 0 10px;
+}
+.adicionar-coment input {
+    border: none;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.add {
+    width: 300px;
+}
+.add:focus {
+    outline: none;
+    color: #262626;
+}
+.botao-publica {
+    margin-right: 10px;
+    background-color: inherit;
+    color: #B2DFFC;
+}
+.botao-publica:hover {
+    color: #0095F6;
+    transition: color 300ms;
+}
+
+/*------------------ SIDEBAR  -------------------*/
+.bloco-sidebar {
+    width: 293px;
+}
+.sidebar {
+    position: fixed;
+    right: inherit;
+    margin-left: 30px;
+    font-size: 14px;
+    width: 293px;
+}
+
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.perfil-usuario img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+.perfil-usuario p {
+    margin-left: 14px;
+}
+
+.texto-sugestoes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sugestao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 290px;
+    margin-bottom: 10px;
+}
+.sugestao p:nth-child(2) {
+    font-size: 12px;
+}
+.sugestao > p {
+    color: rgb(19, 158, 242);
+}
+.sugestao img {
+    width: 32px;
+}
+.perfil-sugerido {
+    display: flex;
+}
+.perfil-sugerido div {
+    margin-left: 10px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* COR  */
+
+.gray {
+    color: rgb(158, 158, 158);
+}
+
+/* HRS */
+
+.hrlogos {
+    border: solid 0.1px rgb(211, 211, 211);
+    margin: 0  10px;
+}
+
+/* VERSÃO TABLET  */
+
+@media (max-width: 935px) {
+    .bloco-sidebar {
+        display: none;
+    }
+    .conteudo-topo {
+        width: 100%;
+    }
+    .logos {
+        margin-left: 3vw; 
+    }
+    .opcoes-topo {
+        margin-right: 3vw;
+    }
+}
+
+/* VERSÃO MOBILE  */
+
+@media (max-width: 614px) {
+    .topo {
+        width: 100%;
+    }
+    .conteudo-topo {
+        width: 100%;
+        margin: 0;
+    }
+    .conteudo {
+        margin-top: 50px;
+    }
+    .conteudo-meio {
+        width: 100%;
+    }
+    .img-post {
+        width: 100%;
+    }
+    .logo-mobile {
+        position: absolute;
+        right: 40%;
+        }
+    .some {
+        display: none;
+    }
+    .mobile {
+        display: flex;
+    }
+    .post {
+        width: 100%;
+        margin-top: 0;
+        height: auto;
+    }
+    .coluna-posts {
+        margin-top: 2px;
+    }
+    .container-conteudo {
+        height: auto;
+    }
+    .stories {
+        background: none;
+        border: none;
+        margin: 0;
+    }
+    .bottom-bar {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        height: 54px;
+        width: 100%;
+        background: white;
+        border: 1px solid rgb(211, 211, 211);
+    }
+    .icons-bottom {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10px;
+    }
+    .icons-bottom ion-icon {
+        font-size: 17px;
+    }
+}
