@@ -5,9 +5,9 @@ export default function Topo() {
                 <div class="logos">
                     <ion-icon name="logo-instagram" class="logo1"></ion-icon>
                     <hr class="hrlogos some" />
-                    <img src="/src/logo.png" alt="logo Instagram" class="logo2 some" />
+                    <img src="./assets/logo.png" alt="logo Instagram" class="logo2 some" />
                 </div>
-                <img src="/src/logo.png" alt="logo Instagram" class="logo-mobile mobile" />
+                <img src="./assets/logo.png" alt="logo Instagram" class="logo-mobile mobile" />
                 <div class="pesquisa">
                     <input type="text" placeholder="Pesquisar"  class="barra-pesquisa some" />
                 </div>

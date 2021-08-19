@@ -4,7 +4,7 @@ export default function ColunaPosts() {
             <div class="post">
                 <div class="infos-post">
                     <div class="perfil">
-                        <img src="../public/assets/images/meowed.png" class="foto-perfil" />
+                        <img src="./assets/images/meowed.png" class="foto-perfil" />
                         <p><strong> meowed </strong></p>
                     </div>
                     <div class="reticencias">
@@ -14,7 +14,7 @@ export default function ColunaPosts() {
                     </div>
                 </div>                 
                 <div class="container-conteudo">
-                    <img src="../public/assets/images/gato-telefone.png" class="img-post" />
+                    <img src="./assets/images/gato-telefone.png" class="img-post" />
                 </div>    
                 <div class="interacao-post">
                     <div class="interacoes-principais ">
@@ -25,7 +25,7 @@ export default function ColunaPosts() {
                     <ion-icon name="bookmark-outline"></ion-icon>
                 </div>
                 <div class="curtidas">
-                    <img src="src/images/respondeai.png" />
+                    <img src="./assets/images/respondeai.png" />
                     <p>Curtido por <strong>respondeai</strong> e 
                         <strong>outras 101.523 pessoas</strong></p>
                 </div>

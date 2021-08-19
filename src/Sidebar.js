@@ -3,7 +3,7 @@ export default function Sidebar() {
         <div class="bloco-sidebar">
             <div class="sidebar">
                 <div class="perfil-usuario">
-                    <img src="src/images/perfil.jpg" />
+                    <img src="./assets/images/perfil.jpg" />
                     <div>
                         <p><strong>kadugs</strong></p>
                         <p class="nome-perfil gray">Cadu</p>
@@ -17,7 +17,7 @@ export default function Sidebar() {
                     <div class="bloco-sugestao">
                         <div class="sugestao">
                             <div class="perfil-sugerido">
-                                <img src="/src/images/badvibesmemes.png" />
+                                <img src="./assets/images/badvibesmemes.png" />
                                 <div>
                                     <p><strong>bad.vibes.memes</strong></p>
                                     <p class="gray">Segue você</p>
@@ -27,7 +27,7 @@ export default function Sidebar() {
                         </div>
                         <div class="sugestao">
                             <div class="perfil-sugerido">
-                                <img src="/src/images/chibirdart.png" />
+                                <img src="./assets/images/chibirdart.png" />
                                 <div>
                                     <p><strong>chibirdart</strong></p>
                                     <p class="gray">Segue você</p>
@@ -37,7 +37,7 @@ export default function Sidebar() {
                         </div>
                         <div class="sugestao">
                             <div class="perfil-sugerido">
-                                <img src="/src/images/razoesparaacreditar.png" />
+                                <img src="./assets/images/razoesparaacreditar.png" />
                                 <div>
                                     <p><strong>razoesparaacreditar</strong></p>
                                     <p class="gray">Novo no Instagram</p>
@@ -47,7 +47,7 @@ export default function Sidebar() {
                         </div>
                         <div class="sugestao">
                             <div class="perfil-sugerido">
-                                <img src="/src/images/adorableanimals.png" />
+                                <img src="./assets/images/adorableanimals.png" />
                                 <div>
                                     <p><strong>adorable_animals</strong></p>
                                     <p class="gray">Segue você</p>
@@ -57,7 +57,7 @@ export default function Sidebar() {
                         </div>
                         <div class="sugestao">
                             <div class="perfil-sugerido">
-                                <img src="/src/images/smallcutecats.png" />
+                                <img src="./assets/images/smallcutecats.png" />
                                 <div>
                                     <p><strong>smallcutecats</strong></p>
                                     <p class="gray">Segue você</p>
