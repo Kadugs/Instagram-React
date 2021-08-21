@@ -1,7 +1,105 @@
 export default function ColunaPosts() {
+    const itensPosts = [
+        {
+            imageProfile: './assets/images/meowed.png',
+            nameProfile: 'meowed',
+            imagePost: './assets/images/gato-telefone.png',
+            likeImage: './assets/images/respondeai.png',
+            likeProfile: 'respondeai',
+            numberOfLikes: '101.523',
+            comments: [
+                {
+                    profileComment: nameProfile,
+                    textComment: 'cat'
+                },
+                {
+                    profileComment: 'respondeai',
+                    textComment: 'oooownnt'
+                },
+                {
+                    profileComment: 'Pedrinho',
+                    textComment: 'gato no zap kkkk'
+                },
+            ]
+        },
+        {
+            imageProfile: './assets/images/adorableanimals.png',
+            nameProfile: 'adorable_animals',
+            imagePost: './assets/images/src/video.ogv',
+            likeImage: './assets/images/respondeai.png',
+            likeProfile: 'respondeai',
+            numberOfLikes: '7.000.000.000',
+            comments: [
+                {
+                    profileComment: nameProfile,
+                    textComment: 'urso é um animal'
+                },
+                {
+                    profileComment: '9gag',
+                    textComment: 'concordo'
+                },
+                {
+                    profileComment: 'barked',
+                    textComment: 'interessante'
+                },
+            ]
+        },
+        {
+            imageProfile: './assets/images/barked.png',
+            nameProfile: 'Barked',
+            imagePost: './assets/images/dog.png',
+            likeImage: './assets/images/respondeai.png',
+            likeProfile: 'respondeai',
+            numberOfLikes: '300',
+            comments: [
+                {
+                    profileComment: nameProfile,
+                    textComment: 'dog'
+                },
+                {
+                    profileComment: 'respondeai',
+                    textComment: 'ooownt'
+                },
+                {
+                    profileComment: 'razoesparaacreditar',
+                    textComment: 'não acredito'
+                },
+            ]
+        },
+        {
+            imageProfile: './assets/images/meowed.png',
+            nameProfile: 'meowed',
+            imagePost: './assets/images/gato-telefone.png',
+            likeImage: './assets/images/respondeai.png',
+            likeProfile: 'respondeai',
+            numberOfLikes: '101.523',
+            comments: [
+                {
+                    profileComment: nameProfile,
+                    textComment: 'cat'
+                },
+                {
+                    profileComment: 'respondeai',
+                    textComment: 'oooownnt'
+                },
+                {
+                    profileComment: 'Pedrinho',
+                    textComment: 'gato no zap kkkk'
+                },
+            ]
+        },
+    ];
+
     return (
         <div class="coluna-posts">
-            <div class="post">
+            
+        </div>
+    );
+}
+
+function Post (props) {
+    return (
+        <div class="post">
                 <div class="infos-post">
                     <div class="perfil">
                         <img src="./assets/images/meowed.png" class="foto-perfil" />
@@ -49,6 +147,5 @@ export default function ColunaPosts() {
                     </div>
                 </div>
             </div>
-        </div>
     );
 }

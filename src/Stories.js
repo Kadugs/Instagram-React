@@ -1,55 +1,56 @@
 export default function Conteudo() {
+    const itensStories = [
+        {
+            image: './assets/images/9gag.png', 
+            title: '9gag'
+        },
+        {
+            image: './assets/images/meowed-stories.png', 
+            title: 'meowed'
+        },
+        {
+            image: './assets/images/barked-stories.png', 
+            title: 'Barked'
+        },
+        {
+            image: './assets/images/nathanwpylestrangeplanet.png', 
+            title: 'nathanwpyle...'
+        },
+        {
+            image: './assets/images/wawawiwacomicsa.png', 
+            title: 'wawawiwac...'
+        },
+        {
+            image: './assets/images/respondeai-stories.png', 
+            title: 'respondeai'
+        },
+        {
+            image: './assets/images/filomoderna.png', 
+            title: 'filomoderna'
+        },
+        {
+            image: './assets/images/memeriagourmet.png', 
+            title: 'memeriagourmet'
+        }
+    ]
+
     return (
         <div class="stories">
-                <ion-icon name="chevron-forward-circle" class="seta some"></ion-icon>
-                <div>
-                    <div class="moldura">
-                        <img src="./assets/images/9gag.png" />
-                    </div>
-                    <p>9gag</p>
-                </div>
-                <div>
-                    <div class="moldura">
-                        <img src="./assets/images/meowed-stories.png" />
-                    </div>
-                    <p>meowed</p>
-                </div>
-                <div>
-                    <div class="moldura">
-                        <img src="./assets/images/barked-stories.png" />
-                    </div>
-                    <p>Barked</p>
-                </div>
-                <div>
-                    <div class="moldura">
-                        <img src="./assets/images/nathanwpylestrangeplanet.png" />
-                    </div>
-                    <p>nathanwpyle...</p>
-                </div>
-                <div>
-                    <div class="moldura">
-                        <img src="./assets/images/wawawiwacomicsa.png" />
-                    </div>
-                    <p>wawawiwac...</p>
-                </div>
-            <div>
-                <div class="moldura">
-                        <img src="./assets/images/respondeai-stories.png" />
-                </div>
-                <p>respondeai</p>
+            <ion-icon name="chevron-forward-circle" class="seta some"></ion-icon>
+            {itensStories.map( (item) => (
+                <Storie image={item.image} title={item.title} />
+                ))}
+        </div>
+    );
+}
+
+function Storie (props) {
+    return (
+        <div>
+            <div class="moldura">
+                <img src={props.image} alt="" />
             </div>
-            <div>
-                <div class="moldura">
-                    <img src="./assets/images/filomoderna.png" />
-                </div>
-                <p>filomoderna</p>
-            </div>
-            <div>
-                <div class="moldura">
-                    <img src="./assets/images/memeriagourmet.png" />
-                </div>
-                <p>memeriagourmet</p>
-            </div>
+            <p>{props.title}</p>
         </div>
     );
 }

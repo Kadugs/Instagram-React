@@ -1,74 +1,80 @@
 export default function Sidebar() {
+    const itensSidebar = [
+        {
+            image: './assets/images/badvibesmemes.png',
+            name: 'bad.vibes.memes',
+            info: 'Segue você'
+        },
+        {
+            image: './assets/images/chibirdart.png',
+            name: 'chibirdart',
+            info: 'Segue você'
+        },
+        {
+            image: './assets/images/razoesparaacreditar.png',
+            name: 'razoesparaacreditar',
+            info: 'Novo no Instagram'
+        },
+        {
+            image: './assets/images/adorableanimals.png',
+            name: 'adorable_animals',
+            info: 'Segue você'
+        },
+        {
+            image: './assets/images/smallcutecats.png',
+            name: 'smallcutecats',
+            info: 'Segue você'
+        }
+    ];
+    const usuario = {
+        image: './assets/images/perfil.jpg',
+        username: 'kadugs',
+        name: 'Cadu'
+    }
+
     return (
         <div class="bloco-sidebar">
             <div class="sidebar">
-                <div class="perfil-usuario">
-                    <img src="./assets/images/perfil.jpg" />
-                    <div>
-                        <p><strong>kadugs</strong></p>
-                        <p class="nome-perfil gray">Cadu</p>
-                    </div>
-                </div>
+                <Usuario image={usuario.image} username={usuario.username} name={usuario.name} /> 
                 <div class="sugestoes">
                     <div class="texto-sugestoes">
                         <p class="gray">Sugestões para você</p>
                         <p><strong>Ver tudo</strong></p>
                     </div>
                     <div class="bloco-sugestao">
-                        <div class="sugestao">
-                            <div class="perfil-sugerido">
-                                <img src="./assets/images/badvibesmemes.png" />
-                                <div>
-                                    <p><strong>bad.vibes.memes</strong></p>
-                                    <p class="gray">Segue você</p>
-                                </div>
-                            </div>
-                            <p class="seguir"><strong>Seguir</strong></p>
-                        </div>
-                        <div class="sugestao">
-                            <div class="perfil-sugerido">
-                                <img src="./assets/images/chibirdart.png" />
-                                <div>
-                                    <p><strong>chibirdart</strong></p>
-                                    <p class="gray">Segue você</p>
-                                </div>
-                            </div>
-                            <p class="seguir"><strong>Seguir</strong></p>
-                        </div>
-                        <div class="sugestao">
-                            <div class="perfil-sugerido">
-                                <img src="./assets/images/razoesparaacreditar.png" />
-                                <div>
-                                    <p><strong>razoesparaacreditar</strong></p>
-                                    <p class="gray">Novo no Instagram</p>
-                                </div>
-                            </div>
-                            <p class="seguir"><strong>Seguir</strong></p>
-                        </div>
-                        <div class="sugestao">
-                            <div class="perfil-sugerido">
-                                <img src="./assets/images/adorableanimals.png" />
-                                <div>
-                                    <p><strong>adorable_animals</strong></p>
-                                    <p class="gray">Segue você</p>
-                                </div>
-                            </div>
-                            <p class="seguir"><strong>Seguir</strong></p>
-                        </div>
-                        <div class="sugestao">
-                            <div class="perfil-sugerido">
-                                <img src="./assets/images/smallcutecats.png" />
-                                <div>
-                                    <p><strong>smallcutecats</strong></p>
-                                    <p class="gray">Segue você</p>
-                                </div>
-                            </div>
-                            <p class="seguir"><strong>Seguir</strong></p>
-                        </div>
+                        {itensSidebar.map( (item) => (
+                            <Sugestao image={item.image} name={item.name} info={item.info} />
+                        )
+                        )}
                     </div>
                 </div>
-                <div class="termos gray">
+            </div>
+        </div>
+    );
+}
+
+function Sugestao (props) {
+    return (
+        <div class="sugestao">
+            <div class="perfil-sugerido">
+                <img src={props.image} alt="" />
+                <div>
+                    <p><strong>{props.name}</strong></p>
+                    <p class="gray">{props.info}</p>
                 </div>
+            </div>
+            <p class="seguir"><strong>Seguir</strong></p>
+        </div>
+    );
+}
+
+function Usuario (props) {
+    return (
+        <div class="perfil-usuario">
+            <img src={props.image} alt="" />
+            <div>
+                <p><strong>{props.username}</strong></p>
+                <p class="nome-perfil gray">{props.name}</p>
             </div>
         </div>
     );
