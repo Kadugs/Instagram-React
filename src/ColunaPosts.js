@@ -4,12 +4,13 @@ export default function ColunaPosts() {
             imageProfile: './assets/images/meowed.png',
             nameProfile: 'meowed',
             imagePost: './assets/images/gato-telefone.png',
+            type: 'image',
             likeImage: './assets/images/respondeai.png',
             likeProfile: 'respondeai',
             numberOfLikes: '101.523',
             comments: [
                 {
-                    profileComment: nameProfile,
+                    profileComment: 'meowed',
                     textComment: 'cat'
                 },
                 {
@@ -25,13 +26,14 @@ export default function ColunaPosts() {
         {
             imageProfile: './assets/images/adorableanimals.png',
             nameProfile: 'adorable_animals',
-            imagePost: './assets/images/src/video.ogv',
+            imagePost: ['./assets/video.ogv', './assets/video.mp4'],
+            type: 'video',
             likeImage: './assets/images/respondeai.png',
             likeProfile: 'respondeai',
             numberOfLikes: '7.000.000.000',
             comments: [
                 {
-                    profileComment: nameProfile,
+                    profileComment: 'adorable_animals',
                     textComment: 'urso é um animal'
                 },
                 {
@@ -48,12 +50,13 @@ export default function ColunaPosts() {
             imageProfile: './assets/images/barked.png',
             nameProfile: 'Barked',
             imagePost: './assets/images/dog.png',
+            type: 'image',
             likeImage: './assets/images/respondeai.png',
             likeProfile: 'respondeai',
             numberOfLikes: '300',
             comments: [
                 {
-                    profileComment: nameProfile,
+                    profileComment: 'Barked',
                     textComment: 'dog'
                 },
                 {
@@ -70,12 +73,13 @@ export default function ColunaPosts() {
             imageProfile: './assets/images/meowed.png',
             nameProfile: 'meowed',
             imagePost: './assets/images/gato-telefone.png',
+            type: 'image',
             likeImage: './assets/images/respondeai.png',
             likeProfile: 'respondeai',
             numberOfLikes: '101.523',
             comments: [
                 {
-                    profileComment: nameProfile,
+                    profileComment: 'meowed',
                     textComment: 'cat'
                 },
                 {
@@ -83,8 +87,8 @@ export default function ColunaPosts() {
                     textComment: 'oooownnt'
                 },
                 {
-                    profileComment: 'Pedrinho',
-                    textComment: 'gato no zap kkkk'
+                    profileComment: 'barked',
+                    textComment: 'de novo essa foto?'
                 },
             ]
         },
@@ -92,8 +96,54 @@ export default function ColunaPosts() {
 
     return (
         <div class="coluna-posts">
-            
+            {itensPosts.map( (item) => (
+                <Post  
+                    imageProfile={item.imageProfile}
+                    nameProfile={item.nameProfile}
+                    imagePost={item.imagePost}
+                    type={item.type}
+                    likeImage={item.likeImage}
+                    likeProfile={item.likeProfile}
+                    numberOfLikes={item.numberOfLikes}
+                    comments={item.comments}
+                />
+            ))}
         </div>
+    );
+}
+
+function Comentario (props) {
+    if (props === 0) {
+        return (
+            <div>
+                <p>
+                <strong> {props.profileComment} </strong> {props.textComment}
+                </p>
+                <p class="ver-todos">Ver todos os comentários</p>
+            </div> 
+        );
+    } 
+    return (
+        <div class="comentario">
+            <p><strong> {props.profileComment} </strong> {props.textComment} </p>
+            <ion-icon name="heart-outline"></ion-icon>
+        </div> 
+    )
+}
+
+function Midia(props) {
+    if(props.type === 'video') {
+        return (
+            <video autoPlay loop class="video-post" >
+                <source src={props.imagePost[0]} type="video/ogg" />
+                <source src={props.imagePost[1]} type="video/mp4" />
+            </video>  
+        );
+    }
+    return (
+        <div class="container-conteudo">
+                <img src={props.imagePost} class="img-post" />
+        </div> 
     );
 }
 
@@ -102,18 +152,19 @@ function Post (props) {
         <div class="post">
                 <div class="infos-post">
                     <div class="perfil">
-                        <img src="./assets/images/meowed.png" class="foto-perfil" />
-                        <p><strong> meowed </strong></p>
+                        <img src={props.imageProfile} class="foto-perfil" />
+                        <p><strong> {props.nameProfile} </strong></p>
                     </div>
                     <div class="reticencias">
                         <ion-icon name="ellipse"></ion-icon>
                         <ion-icon name="ellipse"></ion-icon>
                         <ion-icon name="ellipse"></ion-icon>
                     </div>
-                </div>                 
-                <div class="container-conteudo">
-                    <img src="./assets/images/gato-telefone.png" class="img-post" />
-                </div>    
+                </div>
+                <Midia 
+                    imagePost={props.imagePost}
+                    type={props.type}
+                />                 
                 <div class="interacao-post">
                     <div class="interacoes-principais ">
                         <ion-icon name="heart-outline"></ion-icon>
@@ -123,21 +174,17 @@ function Post (props) {
                     <ion-icon name="bookmark-outline"></ion-icon>
                 </div>
                 <div class="curtidas">
-                    <img src="./assets/images/respondeai.png" />
-                    <p>Curtido por <strong>respondeai</strong> e 
-                        <strong>outras 101.523 pessoas</strong></p>
+                    <img src={props.likeImage} />
+                    <p>Curtido por <strong> {props.likeProfile} </strong> e 
+                        <strong> outras {props.numberOfLikes} pessoas</strong></p>
                 </div>
                 <div class="comentarios">
-                    <p><strong> meowed </strong> cat</p>
-                    <p class="ver-todos">Ver todos os comentários</p>
-                    <div class="comentario">
-                        <p><strong>respondeai</strong> ooownt</p>
-                        <ion-icon name="heart-outline"></ion-icon>
-                        </div>
-                    <div class="comentario">
-                        <p><strong>Pedrinho</strong> gato no zap kkkk</p>
-                        <ion-icon name="heart-outline"></ion-icon>
-                    </div>
+                    {props.comments.map( (item) => (
+                        <Comentario 
+                            profileComment={item.profileComment}
+                            textComment={item.textComment}
+                        />
+                    ))}
                     <div class="adicionar-coment">
                         <div>
                             <ion-icon name="happy-outline"></ion-icon>

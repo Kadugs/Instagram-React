@@ -145,7 +145,7 @@ img:hover,
 
 .post {
     margin-bottom: 60px;
-    height: 890px;
+    max-height: 890px;
 }
 .container-conteudo {
     width: 100%;
